@@ -1,0 +1,116 @@
+.furnitures {
+  padding: 80px 0;
+  font-family: 'Axiforma';
+
+  h2 {
+    font-weight: 700;
+  }
+
+  &__products {
+    li:nth-child(1) {
+      div {
+        img {
+          width: 150px;
+        }
+      }
+    }
+
+    li {
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      min-height: 485px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    div {
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 5px;
+
+      img {
+        width: 200px;
+        margin: auto;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #5f6061;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #29795a;
+    opacity: 0.9;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+
+    &::before {
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      z-index: -1;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: all 0.9s ease;
+      content: '';
+    }
+
+    &:hover {
+      color: #29795a;
+      border: 2px solid #246b4f;
+
+      &::before {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .furnitures {
+    padding: 60px 0 90px;
+
+    h2 {
+      text-align: center;
+    }
+
+    li {
+      min-height: 400px;
+      div {
+        height: 250px;
+      }
+    }
+  }
+}

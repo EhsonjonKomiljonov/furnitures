@@ -1,0 +1,95 @@
+.hero {
+  padding: 200px 0 0;
+  height: 100vh;
+  background-image: url('../../assets/images/hero-bgi.png');
+  background-size: 100%;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px -180px 100px -18px inset;
+
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 8vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .mouse {
+    position: relative;
+    left: calc(50% - 10px);
+    bottom: -8vw;
+    display: block;
+    width: 50px;
+    height: 90px;
+    border-radius: 60px;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      transform: translateX(-50%);
+      background-image: url('../../assets/images/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border-radius: 50%;
+      animation: wheel 4s infinite;
+      content: '';
+    }
+  }
+  
+  @keyframes wheel {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    background-image: url('../../assets/images/tablet-hero-bgi.png');
+    background-position: top -400px center;
+
+    .mouse {
+      bottom: -13vw;
+    }
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .hero {
+    background-position: top -200px center;
+
+    .mouse {
+      bottom: -29vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background-position: top -50px center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .hero {
+    background-image: url('../../assets/images/mobile-hero-bgi.png') !important;
+    background-position: top -80px center;
+  }
+}

@@ -1,0 +1,31 @@
+import Img1 from '../assets/images/chair.png';
+import Img2 from '../assets/images/table.png';
+import Img3 from '../assets/images/closet.png';
+import Img4 from '../assets/images/bed.png';
+
+export const furnitures = [
+  {
+    img_link: Img1,
+    name: 'Chair',
+    price: 100,
+    description: 'A comfortable chair for the cabinet.',
+  },
+  {
+    img_link: Img2,
+    name: 'Table',
+    price: 500,
+    description: 'A comfortable table for the cabinet.',
+  },
+  {
+    img_link: Img3,
+    name: 'Closet',
+    price: 500,
+    description: 'A closet for the cabinet.',
+  },
+  {
+    img_link: Img4,
+    name: 'Bed',
+    price: 500,
+    description: 'A comfortable bed for the bedroom.',
+  },
+];
