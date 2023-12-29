@@ -1,12 +1,6 @@
 import './furnitures.scss';
 import { furnitures } from '../../db/furnitures';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-
-interface Coords {
-  x: number;
-  y: number;
-}
 
 export const Furnitures = () => {
   return (
