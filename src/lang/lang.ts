@@ -43,7 +43,7 @@ export const lang = {
       },
       Furnitures: {
         Title: 'Ommabop mebellarni xarid qiling',
-        Button: 'See All',
+        Button: 'Barchasi',
       },
     },
   },
