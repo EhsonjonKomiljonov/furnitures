@@ -50,6 +50,12 @@
     font-size: 15px;
     font-weight: 700;
 
+    li:last-child {
+      span {
+        display: none;
+      }
+    }
+
     a {
       position: relative;
       color: #fff;
@@ -99,7 +105,7 @@
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 560px) {
   .site-header {
     .nav {
       width: auto;
@@ -107,6 +113,19 @@
 
       li:not(:last-child) {
         display: none;
+      }
+
+      li:last-child {
+        a {
+          display: flex;
+          align-items: center;
+        }
+
+        span {
+          display: block;
+          margin: 0 4px 0 10px;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -138,6 +157,10 @@
       a {
         color: #444;
         font-weight: 700;
+
+        &.active {
+          border-bottom: 2px solid #444;
+        }
       }
     }
 

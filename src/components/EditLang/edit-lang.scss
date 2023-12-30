@@ -1,0 +1,47 @@
+.site-header {
+  &.scrolled .edit-lang__toggle {
+    color: #333;
+    transition: all 0.4s ease;
+  }
+
+  .edit-lang {
+    font-family: 'Axiforma';
+
+    &__toggle {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      transition: all 0.4s ease;
+      outline: none;
+    }
+
+    ul {
+      li:first-child button::before {
+        background-image: url('../../assets/images/uz-icon.png');
+        background-size: 24px;
+        content: '';
+      }
+
+      li:last-child button::before {
+        background-image: url('../../assets/images/en-icon.png');
+        content: '';
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        &::before {
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          content: '';
+        }
+      }
+    }
+  }
+}

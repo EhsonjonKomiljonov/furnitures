@@ -1,0 +1,93 @@
+.about-us {
+  margin-top: 2px;
+  height: 100vh;
+  padding: 120px 0;
+  background-image: url('../../assets/images/about-bgi.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120% auto;
+  box-shadow: inset 0px -450px 100px #000000b8, inset 0px 450px 50px #00000077;
+  transition: all 0.3s ease;
+  animation: animateImg 90s ease infinite;
+  filter: saturate(2);
+
+  h2 {
+    font-size: 70px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+  }
+
+  p {
+    font-family: 'Axiforma';
+    font-size: 19px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+@keyframes animateImg {
+  from {
+    background-size: 120%;
+  }
+  50% {
+    background-size: 170%;
+  }
+  to {
+    background-size: 120%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .about-us {
+    background-size: 140%;
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .about-us {
+    background-image: url('../../assets/images/mobile-about-bgi.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    h2 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .about-us {
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about-us {
+    padding: 80px 0;
+    height: 88vh;
+
+    h2 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 11px;
+    }
+  }
+}

@@ -12,7 +12,7 @@
   h1 {
     color: #fff;
     text-align: center;
-    font-size: 8vw;
+    font-size: 8.5vw;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
@@ -26,6 +26,7 @@
     width: 50px;
     height: 90px;
     border-radius: 60px;
+    rotate: 180deg;
 
     &::before {
       position: absolute;
@@ -43,7 +44,7 @@
       content: '';
     }
   }
-  
+
   @keyframes wheel {
     0% {
       opacity: 0;
@@ -56,6 +57,14 @@
     100% {
       opacity: 0;
       top: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1560px) {
+  .hero {
+    h1 {
+      font-size: 120px;
     }
   }
 }

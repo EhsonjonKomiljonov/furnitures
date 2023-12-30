@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './header.scss';
+import { EditLang } from '../EditLang/EditLang';
 
 export const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const { t } = useTranslation();
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 150) {
@@ -24,32 +27,35 @@ export const Header = () => {
             <nav className='nav'>
               <ul className='w-100 d-flex align-items-center justify-content-between'>
                 <li>
-                  <NavLink to='/'>About Us</NavLink>
+                  <NavLink to='/'>{t('Header.AboutLink')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/furniture'>Furnitures</NavLink>
+                  <NavLink to='/furniture'>{t('Header.FurnitureLink')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/our-work'>Our Work</NavLink>
+                  <NavLink to='/our-work'>{t('Header.OurWorkLink')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/contact'>Contact Us</NavLink>
+                  <NavLink to='/contact'>{t('Header.ContactLink')}
+                    <span>|</span>
+                  </NavLink>
                 </li>
               </ul>
             </nav>
+            <EditLang />
           </div>
         </div>
       </header>
       <nav className='mobile-navbar'>
         <ul className='w-100 d-flex align-items-center justify-content-between'>
           <li>
-            <Link to='/'>About Us</Link>
+            <NavLink to='/'>About Us</NavLink>
           </li>
           <li>
-            <Link to='/furniture'>Furnitures</Link>
+            <NavLink to='/furniture'>Furnitures</NavLink>
           </li>
           <li>
-            <Link to='/our-work'>Our Work</Link>
+            <NavLink to='/our-work'>Our Work</NavLink>
           </li>
         </ul>
       </nav>

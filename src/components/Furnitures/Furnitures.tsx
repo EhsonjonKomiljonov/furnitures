@@ -1,13 +1,16 @@
 import './furnitures.scss';
 import { furnitures } from '../../db/furnitures';
-import { Link } from 'react-router-dom';
+import { GreenBtn } from '../GreenBtn/GreenBtn';
+import { useTranslation } from 'react-i18next';
 
 export const Furnitures = () => {
+  const { t } = useTranslation();
+
   return (
     <section className='furnitures' id='furnitures'>
       <div className='container'>
         <div className='furnitures__inner'>
-          <h2>Shop Popular Furnitures</h2>
+          <h2>{t('Home.Furnitures.Title')}</h2>
 
           <ul className='furnitures__products d-flex align-items-center justify-content-center mt-5 flex-wrap gap-4'>
             {furnitures.map((item) => (
@@ -17,13 +20,11 @@ export const Furnitures = () => {
                 </div>
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                <span>{item.price}</span>
+                <span>{item.price}$</span>
               </li>
             ))}
           </ul>
-          <Link className='furnitures__btn' to='/furniture'>
-            See All
-          </Link>
+          <GreenBtn text={t('Home.Furnitures.Button')} path='/furnitures' />
         </div>
       </div>
     </section>
