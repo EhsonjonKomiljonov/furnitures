@@ -7,7 +7,7 @@ export const useLangStore = create<LangType>()(
   devtools(
     immer((set) => ({
       lang: 'en',
-      setLang: (lang: string) => set((state) => ({ lang: lang })),
+      setLang: (lang: string) => set(() => ({ lang: lang })),
     }))
   )
 );
