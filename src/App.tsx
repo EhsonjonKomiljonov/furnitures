@@ -5,11 +5,10 @@ import i18n from 'i18next';
 import { lang } from './lang/lang';
 import { useLangStore } from './stores/LangStore';
 import Footer from './components/Footer/Footer';
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import { Loading } from './components/Loading/Loading';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
   const setLang = useLangStore((store) => store.setLang);
 
   i18n.use(initReactI18next).init({
@@ -28,12 +27,6 @@ function App() {
   });
 
   setLang(localStorage.getItem('lang') || 'en');
-
-  // setTimeout(() => {
-  //   setIsLoading(false);
-  // }, 3500);
-
-  // if (isLoading) return <Loading />;
 
   return (
     <Suspense fallback={<Loading />}>
