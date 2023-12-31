@@ -6,7 +6,7 @@ import { OurFounders } from '../../components/OurFounders/OurFounders';
 import { Sale } from '../../components/Sale/Sale';
 import { WeWork } from '../../components/WeWork/WeWork';
 
-export const Home = () => {
+const Home = () => {
   return (
     <main>
       <Hero />
@@ -19,3 +19,5 @@ export const Home = () => {
     </main>
   );
 };
+
+export default Home;

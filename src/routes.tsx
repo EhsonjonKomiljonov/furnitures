@@ -1,6 +1,9 @@
+import * as React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
-import { Home } from './pages/Home/Home';
+// import { Home } from './pages/Home/Home';
+
+const Home = React.lazy(() => import('./pages/Home/Home'))
 
 export const router = createBrowserRouter([
   {

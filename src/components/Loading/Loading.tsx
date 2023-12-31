@@ -6,7 +6,7 @@ export const Loading = () => {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.3 },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -24,8 +24,12 @@ export const Loading = () => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 1, }}
-        animate={{ opacity: 0, transition: { duration: 0.5, delay: 3 } }}
+        initial={{ opacity: 1, y: 0 }}
+        animate={{
+          opacity: 0,
+          y: -300,
+          transition: { duration: 0.5, delay: 2.5 },
+        }}
         className='loader-box'
       >
         <motion.h1
