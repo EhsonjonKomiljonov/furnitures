@@ -1,3 +1,7 @@
+:root {
+  --green: #1d513d;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Alegreya';

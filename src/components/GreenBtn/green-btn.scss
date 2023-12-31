@@ -7,7 +7,7 @@
   margin: 30px auto 0;
   padding: 10px 0;
   text-align: center;
-  background-color: #1d513d;
+  background-color: var(--green);
   opacity: 0.9999;
   color: #fff;
   border: 2px solid transparent;
@@ -27,8 +27,8 @@
   }
 
   &:hover {
-    color: #1d513d;
-    border: 2px solid #1d513d;
+    color: var(--green);
+    border: 2px solid var(--green);
 
     &::before {
       width: 300px;
