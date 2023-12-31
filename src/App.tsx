@@ -4,6 +4,9 @@ import { Header } from './components/Header/Header';
 import i18n from 'i18next';
 import { lang } from './lang/lang';
 import { useLangStore } from './stores/LangStore';
+import Footer from './components/Footer/Footer';
+import { Suspense } from 'react';
+import { Loading } from './components/Loading/Loading';
 
 function App() {
   const setLang = useLangStore((store) => store.setLang);
@@ -27,8 +30,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Outlet />
+      <Suspense fallback={<Loading />}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Suspense>
     </>
   );
 }

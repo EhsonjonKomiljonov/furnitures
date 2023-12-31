@@ -1,0 +1,11 @@
+::selection {
+  color: #fff;
+  background-color: transparent;
+  text-shadow: 5px 5px 5px var(--green);
+}
+
+.loader-box {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
