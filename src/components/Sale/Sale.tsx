@@ -25,7 +25,6 @@ export const Sale = () => {
                 <span>furniture</span> dan qishki chegirma!
               </h3>
             )}
-
             <p>
               {t('Home.Sale.SubDesc')}
             </p>

@@ -1,0 +1,42 @@
+.we-work {
+  font-family: 'Axiforma';
+  padding: 0 0 80px;
+
+  h2 {
+    font-weight: 700;
+    
+    span {
+      font-family: 'Alegreya';
+      font-weight: 700;
+    }
+  }
+
+  .we-work__list {
+    gap: 50px;
+
+    li {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+
+      img {
+        width: 100%;
+        max-width: 360px;
+        border-radius: 10px;
+      }
+
+      h3 {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .we-work {
+    h2 {
+      font-size: 22px;
+    }
+  }
+}

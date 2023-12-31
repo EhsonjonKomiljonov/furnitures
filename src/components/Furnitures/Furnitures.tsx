@@ -20,7 +20,10 @@ export const Furnitures = () => {
                 </div>
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                <span>{item.price}$</span>
+                <sub className='text-decoration-line-through'>
+                  {item.price}$
+                </sub>
+                <span className='d-block' >{item.sale_price}$</span>
               </li>
             ))}
           </ul>

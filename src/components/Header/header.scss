@@ -44,7 +44,7 @@
 
   .nav {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     font-family: 'Roboto';
     font-size: 15px;
@@ -92,20 +92,20 @@
   display: none;
 }
 
-@media screen and (max-width: 655px) {
+@media screen and (max-width: 675px) {
   .site-header {
     .nav {
-      max-width: 330px;
+      max-width: 380px;
       margin: 0;
     }
 
     a {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 610px) {
   .site-header {
     .nav {
       width: auto;
@@ -176,6 +176,35 @@
 
     li:nth-child(3)::before {
       background-image: url('../../assets/images/saw.svg');
+    }
+   
+    li:nth-child(4)::before {
+      background-image: url('../../assets/images/newspaper.svg');
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .mobile-navbar {
+    li::before {
+      width: 25px;
+      height: 25px;
+    }
+
+    li:nth-child(2)::before {
+      background-size: 30px;
+    }
+
+    a {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .mobile-navbar {
+    a {
+      font-size: 11px;
     }
   }
 }

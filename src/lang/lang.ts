@@ -5,6 +5,7 @@ export const lang = {
       FurnitureLink: 'Furnitures',
       OurWorkLink: 'Our Work',
       ContactLink: 'Contact Us',
+      NewsLink: 'News'
     },
     Home: {
       About: {
@@ -18,7 +19,7 @@ export const lang = {
         Title: `Discover The Best Furniture for You!`,
       },
       Furnitures: {
-        Title: 'Shop Popular Furnitures',
+        Title: 'Shop discount furnitures!',
         Button: 'See All',
       },
       CheckOutFurniture: {
@@ -39,6 +40,7 @@ export const lang = {
       FurnitureLink: 'Mebellar',
       OurWorkLink: 'Bizning ishlar',
       ContactLink: "Bog'lanish",
+      NewsLink: 'Yangiliklar',
     },
     Home: {
       About: {
@@ -52,7 +54,7 @@ export const lang = {
         Title: `O'zingiz uchun eng yaxshi mebelni toping!`,
       },
       Furnitures: {
-        Title: 'Ommabop mebellarni xarid qiling',
+        Title: 'Chegirmadagi mebellarni harid qiling!',
         Button: 'Barchasi',
       },
       CheckOutFurniture: {

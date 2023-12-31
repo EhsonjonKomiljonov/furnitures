@@ -1,0 +1,29 @@
+.our-founders {
+  padding: 0 0 80px;
+  font-family: 'Axiforma';
+
+  h2 {
+    font-weight: 700;
+  }
+
+  ul {
+    gap: 60px;
+
+    li {
+      width: 100%;
+      max-width: 500px;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

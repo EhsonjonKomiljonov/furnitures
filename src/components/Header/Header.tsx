@@ -36,7 +36,11 @@ export const Header = () => {
                   <NavLink to='/our-work'>{t('Header.OurWorkLink')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/contact'>{t('Header.ContactLink')}
+                  <NavLink to='/news'>{t('Header.NewsLink')}</NavLink>
+                </li>
+                <li>
+                  <NavLink to='/contact'>
+                    {t('Header.ContactLink')}
                     <span>|</span>
                   </NavLink>
                 </li>
@@ -49,13 +53,16 @@ export const Header = () => {
       <nav className='mobile-navbar'>
         <ul className='w-100 d-flex align-items-center justify-content-between'>
           <li>
-            <NavLink to='/'>About Us</NavLink>
+            <NavLink to='/'>{t('Header.AboutLink')}</NavLink>
           </li>
           <li>
-            <NavLink to='/furniture'>Furnitures</NavLink>
+            <NavLink to='/furniture'>{t('Header.FurnitureLink')}</NavLink>
           </li>
           <li>
-            <NavLink to='/our-work'>Our Work</NavLink>
+            <NavLink to='/our-work'>{t('Header.OurWorkLink')}</NavLink>
+          </li>
+          <li>
+            <NavLink to='/news'>{t('Header.NewsLink')}</NavLink>
           </li>
         </ul>
       </nav>
