@@ -17,8 +17,8 @@ export const AllFurnitures = () => {
   };
 
   useEffect(() => {
-    console.log(category);
-  }, [category]);
+    setCategory(lang == 'en' ? 'popular' : 'ommabop');
+  }, [lang]);
 
   return (
     <section className='all-furnitures'>
