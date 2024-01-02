@@ -1,6 +1,6 @@
 import { AboutUs } from '../../components/AboutUs/AboutUs';
 import { CheckOutFurniture } from '../../components/CheckOutFurniture/CheckOutFurniture';
-import { Furnitures } from '../../components/Furnitures/Furnitures';
+import { SaleFurnitures } from '../../components/SaleFurnitures/SaleFurnitures';
 import { Hero } from '../../components/Hero/Hero';
 import { OurFounders } from '../../components/OurFounders/OurFounders';
 import { Sale } from '../../components/Sale/Sale';
@@ -13,7 +13,7 @@ const Home = () => {
       <AboutUs />
       <CheckOutFurniture />
       <Sale />
-      <Furnitures />
+      <SaleFurnitures />
       <WeWork />
       <OurFounders />
     </main>

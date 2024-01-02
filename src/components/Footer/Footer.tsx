@@ -25,7 +25,7 @@ const Footer = () => {
                 <NavLink to='/'>{t('Header.AboutLink')}</NavLink>
               </li>
               <li>
-                <NavLink to='/furniture'>{t('Header.FurnitureLink')}</NavLink>
+                <NavLink to='/furnitures'>{t('Header.FurnitureLink')}</NavLink>
               </li>
               <li>
                 <NavLink to='/our-work'>{t('Header.OurWorkLink')}</NavLink>

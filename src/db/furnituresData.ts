@@ -5,6 +5,7 @@ import Img4 from '../assets/images/bed.png';
 
 export const furnitures = [
   {
+    id: 1,
     img_link: Img1,
     name: 'Chair',
     price: 100,
@@ -12,6 +13,7 @@ export const furnitures = [
     description: 'A comfortable chair for the cabinet.',
   },
   {
+    id: 2,
     img_link: Img2,
     name: 'Table',
     price: 500,
@@ -19,6 +21,7 @@ export const furnitures = [
     description: 'A comfortable table for the cabinet.',
   },
   {
+    id: 3,
     img_link: Img3,
     name: 'Closet',
     price: 300,
@@ -26,6 +29,7 @@ export const furnitures = [
     description: 'A closet for the cabinet.',
   },
   {
+    id: 4,
     img_link: Img4,
     name: 'Bed',
     price: 500,

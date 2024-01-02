@@ -1,9 +1,9 @@
-import './furnitures.scss';
+import './sale-furnitures.scss';
 import { furnitures } from '../../db/furnituresData';
 import { GreenBtn } from '../GreenBtn/GreenBtn';
 import { useTranslation } from 'react-i18next';
 
-export const Furnitures = () => {
+export const SaleFurnitures = () => {
   const { t } = useTranslation();
 
   return (

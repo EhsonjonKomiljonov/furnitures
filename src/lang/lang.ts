@@ -33,6 +33,11 @@ export const lang = {
           'Save up to 70% with offers for every room until 16.01.2024! Celebrate the holidays and start 2024 with deals on dressers, comforters, TV units, pet accessories, storage and much more.',
       },
     },
+    Furnitures: {
+      Intro: {
+        Title: 'Modern looking cabinet',
+      }
+    }
   },
   uz: {
     Header: {
@@ -68,5 +73,10 @@ export const lang = {
           "16.01.2024 yilgacha har bir xona uchun takliflar bilan 70% gacha tejang! Bayramlarni nishonlang va 2024-yilni ko'ylaklar, ko'rpa-to'shaklar, televizorlar, uy hayvonlari uchun aksessuarlar, saqlash va boshqalarga chegirmalar bilan boshlang.",
       },
     },
+    Furnitures: {
+      Intro: {
+        Title: "Zamonaviy ko'rinishdagi kabinet",
+      }
+    }
   },
 };

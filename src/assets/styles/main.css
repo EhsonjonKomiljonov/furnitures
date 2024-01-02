@@ -2,6 +2,12 @@
   --green: #1d513d;
 }
 
+::selection {
+  color: #fff;
+  background-color: var(--green);
+  text-shadow: 1px 1px 3px #fff;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Alegreya';
