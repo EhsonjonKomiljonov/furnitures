@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSaveSaleStore } from '../../stores/SaveSaleStore';  
+import { useSaveSaleStore } from '../../stores/SaveSaleStore';
 import { SaleFurnituresCard } from '../SaleFurnituresCard/SaleFurnituresCard';
 import './saved-sale-products.scss';
 
@@ -10,7 +10,9 @@ export const SavedSaleProducts = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    setSaveSaleData(JSON.parse(localStorage.getItem('sale-products')) || []);
+    setSaveSaleData(
+      JSON.parse(localStorage.getItem('sale-products') || '{}') || []
+    );
   }, []);
 
   return (

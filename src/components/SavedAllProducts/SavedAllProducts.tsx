@@ -10,7 +10,9 @@ export const SavedAllProducts = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    setSavedData(JSON.parse(localStorage.getItem('all-products')) || []);
+    setSavedData(
+      JSON.parse(localStorage.getItem('all-products') || '{}') || []
+    );
   }, []);
 
   return (

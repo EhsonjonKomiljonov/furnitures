@@ -21,6 +21,7 @@ export const ContactForm = () => {
   });
 
   const onSubmit = (values: ContactUsFormValues, { resetForm }: any) => {
+    console.log(values)
     resetForm();
     setIsLoading(true);
   };
