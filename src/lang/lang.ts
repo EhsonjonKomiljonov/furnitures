@@ -5,7 +5,7 @@ export const lang = {
       FurnitureLink: 'Furnitures',
       OurWorkLink: 'Our Work',
       ContactLink: 'Contact Us',
-      NewsLink: 'News'
+      NewsLink: 'News',
     },
     Home: {
       About: {
@@ -36,8 +36,26 @@ export const lang = {
     Furnitures: {
       Intro: {
         Title: 'Modern looking cabinet',
-      }
-    }
+      },
+      AllFurnitures: {
+        Title: 'Furnitures',
+      },
+      AllSaleFurnitures: {
+        Title: 'Winter Sale Furnitures!',
+      },
+    },
+    SavedProducts: {
+      Intro: {
+        Title: 'You can find your saved furniture here!',
+      },
+      AllProducts: {
+        Title: 'All Furnitures',
+        NotFound: 'No saved furnitures found!',
+      },
+      SaleProducts: {
+        Title: 'Sale Furnitures', 
+      },
+    },
   },
   uz: {
     Header: {
@@ -76,7 +94,25 @@ export const lang = {
     Furnitures: {
       Intro: {
         Title: "Zamonaviy ko'rinishdagi kabinet",
-      }
-    }
+      },
+      AllFurnitures: {
+        Title: 'Mebellar',
+      },
+      AllSaleFurnitures: {
+        Title: 'Qishki Chegirmadagi mebellar!',
+      },
+    },
+    SavedProducts: {
+      Intro: {
+        Title: 'Siz bu yerda saqlagan mebellaringizni topa olasiz!',
+      },
+      AllProducts: {
+        Title: 'Barcha Mebellar',
+        NotFound: 'Saqlangan mebel topilmadi!',
+      },
+      SaleProducts: {
+        Title: 'Sale Furnitures', 
+      },
+    },
   },
 };

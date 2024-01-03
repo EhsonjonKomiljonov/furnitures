@@ -12,15 +12,15 @@ export const OurFounders = () => {
           <h2 className='text-center mb-4'>Our Founders</h2>
           <ul className='d-flex justify-content-center flex-wrap'>
             {lang == 'en'
-              ? ourFoundersData.map((item) => (
-                  <li>
+              ? ourFoundersData.map((item, index) => (
+                  <li key={index}>
                     <img src={item.img} alt={item.name} />
                     <h3>{item.name}</h3>
                     <p>{item.desc}</p>
                   </li>
                 ))
-              : ourFoundersUzData.map((item) => (
-                  <li>
+              : ourFoundersUzData.map((item, index) => (
+                  <li key={index}>
                     <img src={item.img} alt={item.name} />
                     <h3>{item.name}</h3>
                     <p>{item.desc}</p>

@@ -17,8 +17,8 @@ export const CheckOutFurniture = () => {
           <h2 className='text-center'>{t('Home.CheckOutFurniture.Title')}</h2>
           <ul className='d-flex align-items-center justify-content-center flex-wrap mt-4'>
             {lang == 'en'
-              ? checkOutFurnitureData.map((item) => (
-                  <li>
+              ? checkOutFurnitureData.map((item, index) => (
+                  <li key={index}>
                     <img
                       className='d-block mx-auto'
                       src={item.img}
@@ -28,8 +28,8 @@ export const CheckOutFurniture = () => {
                     <p>{item.title}</p>
                   </li>
                 ))
-              : checkOutFurnitureUzData.map((item) => (
-                  <li>
+              : checkOutFurnitureUzData.map((item, index) => (
+                  <li key={index}>
                     <img
                       className='d-block mx-auto'
                       src={item.img}

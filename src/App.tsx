@@ -4,7 +4,6 @@ import { Header } from './components/Header/Header';
 import i18n from 'i18next';
 import { lang } from './lang/lang';
 import { useLangStore } from './stores/LangStore';
-import Footer from './components/Footer/Footer';
 import { Suspense } from 'react';
 import { Loading } from './components/Loading/Loading';
 
@@ -32,7 +31,6 @@ function App() {
     <Suspense fallback={<Loading />}>
       <Header />
       <Outlet />
-      <Footer />
     </Suspense>
   );
 }

@@ -1,13 +1,13 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
-import { LangStoreType } from '../types';
+import { SaveStoreType } from '../types';
 
-export const useLangStore = create<LangStoreType>()(
+export const useSaveStore = create<SaveStoreType>()(
   devtools(
     immer((set) => ({
-      lang: 'en',
-      setLang: (lang: string) => set(() => ({ lang })),
+      savedData: [],
+      setSavedData: (savedData) => set(() => ({ savedData })),
     }))
   )
 );

@@ -92,6 +92,26 @@
   display: none;
 }
 
+.saved-link {
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  z-index: 5;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  a {
+    display: block;
+    padding: 5px;
+  }
+
+  img {
+    width: 40px;
+  }
+}
+
 @media screen and (max-width: 675px) {
   .site-header {
     .nav {
@@ -116,17 +136,22 @@
       }
 
       li:last-child {
-        a {
-          display: flex;
-          align-items: center;
-        }
+        display: flex;
+        align-items: center;
 
         span {
           display: block;
           margin: 0 4px 0 10px;
           font-size: 20px;
+          color: #fff;
         }
       }
+    }
+  }
+
+  .saved-link {
+    img {
+      width: 30px;
     }
   }
 
@@ -177,7 +202,7 @@
     li:nth-child(3)::before {
       background-image: url('../../assets/images/saw.svg');
     }
-   
+
     li:nth-child(4)::before {
       background-image: url('../../assets/images/newspaper.svg');
     }

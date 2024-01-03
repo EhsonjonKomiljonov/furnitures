@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   allFurnituresData,
   allFurnituresUzData,
 } from '../../db/allFurnituresData';
 import { useLangStore } from '../../stores/LangStore';
+import { AllFurnituresCard } from '../AllFurnituresCard/AllFurnituresCard';
 import './all-furnitures.scss';
 
 export const AllFurnitures = () => {
@@ -11,6 +13,7 @@ export const AllFurnitures = () => {
   const [category, setCategory] = useState(
     lang == 'en' ? 'popular' : 'ommabop'
   );
+  const {t} = useTranslation()
 
   const handleSetCategory = (text: string) => {
     setCategory(text);
@@ -24,7 +27,7 @@ export const AllFurnitures = () => {
     <section className='all-furnitures'>
       <div className='container'>
         <div className='all-furnitures__inner'>
-          <h2 className='text-center mb-4'>Furnitures</h2>
+          <h2 className='text-center mb-4'>{t('Furnitures.AllFurnitures.Title')}</h2>
           <div className='dropdown'>
             <button
               className='btn dropdown-toggle'
@@ -101,52 +104,15 @@ export const AllFurnitures = () => {
             {lang == 'en'
               ? allFurnituresData.map((item) => {
                   if (item.category == category) {
-                    return (
-                      <li>
-                        <img src={item.img} alt={item.title} />
-                        <div>
-                          <h3>{item.title}</h3>
-                          <p>{item.desc}</p>
-                          <span>{item.price}$</span>
-                        </div>
-                      </li>
-                    );
+                    return <AllFurnituresCard obj={item} key={item.id} />;
                   } else if (category == 'popular')
-                    return (
-                      <li>
-                        <img src={item.img} alt={item.title} />
-                        <div>
-                          <h3>{item.title}</h3>
-                          <p>{item.desc}</p>
-                          <span>{item.price}$</span>
-                        </div>
-                      </li>
-                    );
+                    return <AllFurnituresCard obj={item} key={item.id} />;
                 })
               : allFurnituresUzData.map((item) => {
                   if (item.category == category) {
-                    console.log(item);
-                    return (
-                      <li>
-                        <img src={item.img} alt={item.title} />
-                        <div>
-                          <h3>{item.title}</h3>
-                          <p>{item.desc}</p>
-                          <span>{item.price}$</span>
-                        </div>
-                      </li>
-                    );
+                    return <AllFurnituresCard obj={item} key={item.id} />;
                   } else if (category == 'ommabop')
-                    return (
-                      <li>
-                        <img src={item.img} alt={item.title} />
-                        <div>
-                          <h3>{item.title}</h3>
-                          <p>{item.desc}</p>
-                          <span>{item.price}$</span>
-                        </div>
-                      </li>
-                    );
+                    return <AllFurnituresCard obj={item} key={item.id} />;
                 })}
           </ul>
         </div>

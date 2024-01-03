@@ -4,6 +4,9 @@ import App from './App';
 
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const Furnitures = React.lazy(() => import('./pages/Furnitures/Furnitures'));
+const SavedProducts = React.lazy(() => import('./pages/SavedProducts/SavedProducts'));
+const OurWork = React.lazy(() => import('./pages/OurWork/OurWork'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs/ContactUs'));
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +20,18 @@ export const router = createBrowserRouter([
       {
         path: '/furnitures',
         element: <Furnitures />,
+      },
+      {
+        path: '/our-work',
+        element: <OurWork />,
+      },
+      {
+        path: '/contact',
+        element: <ContactUs />,
+      },
+      {
+        path: '/saved',
+        element: <SavedProducts />,
       },
     ],
   },

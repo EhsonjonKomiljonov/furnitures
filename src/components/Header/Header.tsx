@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import './header.scss';
 import { EditLang } from '../EditLang/EditLang';
+import SavedIcon from '../../assets/images/saved-icon.svg';
+import './header.scss';
 
 export const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -30,7 +31,9 @@ export const Header = () => {
                   <NavLink to='/'>{t('Header.AboutLink')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/furnitures'>{t('Header.FurnitureLink')}</NavLink>
+                  <NavLink to='/furnitures'>
+                    {t('Header.FurnitureLink')}
+                  </NavLink>
                 </li>
                 <li>
                   <NavLink to='/our-work'>{t('Header.OurWorkLink')}</NavLink>
@@ -39,10 +42,8 @@ export const Header = () => {
                   <NavLink to='/news'>{t('Header.NewsLink')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/contact'>
-                    {t('Header.ContactLink')}
-                    <span>|</span>
-                  </NavLink>
+                  <NavLink to='/contact'>{t('Header.ContactLink')}</NavLink>
+                  <span>|</span>
                 </li>
               </ul>
             </nav>
@@ -50,6 +51,11 @@ export const Header = () => {
           </div>
         </div>
       </header>
+      <div className='saved-link'>
+        <Link to='/saved'>
+          <img src={SavedIcon} alt='Saved' />
+        </Link>
+      </div>
       <nav className='mobile-navbar'>
         <ul className='w-100 d-flex align-items-center justify-content-between'>
           <li>

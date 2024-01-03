@@ -1,0 +1,82 @@
+.contact-us {
+  padding-top: calc(13vw + 100px);
+  font-family: 'Axiforma';
+
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 57px;
+    background-image: url('../../assets/images/hero-bgi.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+  }
+
+  &__form {
+    margin-top: 50px;
+    label {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    span:not(.err-msg) {
+      position: absolute;
+      top: 5px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 5px 15px 5px 50px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid var(--green);
+      background-color: transparent;
+    }
+
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .err-msg {
+      position: absolute;
+      bottom: -22px;
+      font-size: 14px;
+      color: #9a1010;
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .contact-us {
+    padding-top: calc(15vw + 120px);
+
+    .err-msg {
+      font-size: 13px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .contact-us {
+    padding-top: calc(15vw + 120px);
+
+    &__form {
+      .err-msg {
+        bottom: -40px;
+      }
+
+      input {
+        margin-bottom: 50px !important;
+      }
+    }
+  }
+}

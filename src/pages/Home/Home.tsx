@@ -5,18 +5,22 @@ import { Hero } from '../../components/Hero/Hero';
 import { OurFounders } from '../../components/OurFounders/OurFounders';
 import { Sale } from '../../components/Sale/Sale';
 import { WeWork } from '../../components/WeWork/WeWork';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
-    <main>
-      <Hero />
-      <AboutUs />
-      <CheckOutFurniture />
-      <Sale />
-      <SaleFurnitures />
-      <WeWork />
-      <OurFounders />
-    </main>
+    <>
+      <main>
+        <Hero />
+        <AboutUs />
+        <CheckOutFurniture />
+        <Sale />
+        <SaleFurnitures />
+        <WeWork />
+        <OurFounders />
+      </main>
+      <Footer />
+    </>
   );
 };
 

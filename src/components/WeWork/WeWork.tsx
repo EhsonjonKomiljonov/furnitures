@@ -21,15 +21,15 @@ export const WeWork = () => {
           )}
           <ul className='d-flex justify-content-center flex-wrap we-work__list'>
             {lang == 'en'
-              ? weWorkData.map((item) => (
-                  <li>
+              ? weWorkData.map((item, index) => (
+                  <li key={index}>
                     <img src={item.img} alt={item.title} />
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>
                   </li>
                 ))
-              : weWorkUzData.map((item) => (
-                  <li>
+              : weWorkUzData.map((item, index) => (
+                  <li key={index}>
                     <img src={item.img} alt={item.title} />
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>
