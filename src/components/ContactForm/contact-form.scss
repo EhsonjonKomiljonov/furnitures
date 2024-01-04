@@ -1,5 +1,5 @@
 .contact-us {
-  padding-top: calc(13vw + 100px);
+  padding-top: calc(11vw + 100px);
   font-family: 'Axiforma';
 
   &::before {
@@ -17,12 +17,17 @@
 
   &__form {
     margin-top: 50px;
+
     label {
       position: relative;
       display: block;
       width: 100%;
       max-width: 350px;
       margin: 0 auto;
+    }
+
+    label + label {
+      margin-top: 30px;
     }
 
     span:not(.err-msg) {
@@ -33,11 +38,17 @@
     input {
       display: block;
       width: 100%;
-      padding: 5px 15px 5px 50px;
       border: none;
       outline: none;
+      padding: 5px 15px;
       border-bottom: 2px solid var(--green);
       background-color: transparent;
+    }
+
+    label:nth-child(2) {
+      input {
+        padding: 5px 15px 5px 50px;
+      }
     }
 
     input[type='number']::-webkit-inner-spin-button,
@@ -48,7 +59,7 @@
 
     .err-msg {
       position: absolute;
-      bottom: -22px;
+      top: 35px;
       font-size: 14px;
       color: #9a1010;
     }
@@ -70,10 +81,6 @@
     padding-top: calc(15vw + 120px);
 
     &__form {
-      .err-msg {
-        bottom: -40px;
-      }
-
       input {
         margin-bottom: 50px !important;
       }

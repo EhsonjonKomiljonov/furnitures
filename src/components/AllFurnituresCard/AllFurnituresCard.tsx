@@ -8,7 +8,7 @@ export const AllFurnituresCard = ({ obj, path }: AllFurnituresCardProp) => {
 
   const handleSaveProduct = (evt: React.ChangeEvent<HTMLInputElement>) => {
     if (evt.currentTarget.checked) {
-      const localData = JSON.parse(localStorage.getItem('all-products') || '{}') || [];
+      const localData = JSON.parse(localStorage.getItem('all-products') || '[]');
 
       if (id.toString() == evt.currentTarget.id) {
         localData.push(obj);
@@ -17,7 +17,7 @@ export const AllFurnituresCard = ({ obj, path }: AllFurnituresCardProp) => {
       setSavedData(localData);
       localStorage.setItem('all-products', JSON.stringify(localData));
     } else {
-      const localData = JSON.parse(localStorage.getItem('all-products')  || '{}') || [];
+      const localData = JSON.parse(localStorage.getItem('all-products')  || '[]');
 
       const deletedProduct = localData.filter(
         (item: any) => item.id != evt.currentTarget.id

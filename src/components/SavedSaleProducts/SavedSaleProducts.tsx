@@ -11,7 +11,7 @@ export const SavedSaleProducts = () => {
 
   useEffect(() => {
     setSaveSaleData(
-      JSON.parse(localStorage.getItem('sale-products') || '{}') || []
+      JSON.parse(localStorage.getItem('sale-products') || '[]') || []
     );
   }, []);
 

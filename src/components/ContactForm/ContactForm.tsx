@@ -10,10 +10,15 @@ export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
+    full_name: '',
     phone_number: '',
   };
 
   const validationSchema = Yup.object({
+    full_name: Yup.string()
+      .required('Please enter your full name!')
+      .min(3, 'Full name must be at least 3 characters long!')
+      .max(35, 'The full name can be a maximum of 35 characters!'),
     phone_number: Yup.string()
       .required('Please enter your phone number!')
       .min(9, 'Phone number must be at least 9 digits long!')
@@ -21,7 +26,7 @@ export const ContactForm = () => {
   });
 
   const onSubmit = (values: ContactUsFormValues, { resetForm }: any) => {
-    console.log(values)
+    console.log(values);
     resetForm();
     setIsLoading(true);
   };
@@ -43,6 +48,12 @@ export const ContactForm = () => {
             onSubmit={onSubmit}
           >
             <Form className='contact-us__form'>
+              <label>
+                <Field type='text' name='full_name' placeholder='Full name' />
+                <span className='err-msg'>
+                  <ErrorMessage name='full_name' />
+                </span>
+              </label>
               <label>
                 <span>+998</span>
                 <Field
