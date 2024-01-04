@@ -1,0 +1,24 @@
+.all-news {
+  padding-bottom: 80px;
+  font-family: 'Axiforma';
+
+  ul {
+    li {
+      width: 100%;
+      max-width: 380px;
+
+      img {
+        width: 100%;
+        max-width: 380px;
+        height: 400px;
+        border-radius: 20px 0 20px 0;
+        border-right: 2px solid var(--green);
+        border-left: 2px solid var(--green);
+      }
+
+      h3 {
+        font-size: 19px;
+      }
+    }
+  }
+}

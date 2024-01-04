@@ -1,0 +1,32 @@
+.our-masters {
+  padding: 80px 0;
+  font-family: 'Axiforma';
+
+  h2 {
+    font-weight: 700;
+  }
+
+  ul {
+    li {
+      width: 100%;
+      max-width: 320px;
+
+      img {
+        width: 100%;
+        max-width: 320px;
+        height: 390px;
+        border-radius: 10px 0 10px  0;
+        border-right: 2px solid var(--green);
+        border-left: 2px solid var(--green);
+      }
+
+      h3 {
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

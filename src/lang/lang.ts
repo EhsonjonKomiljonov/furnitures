@@ -53,7 +53,23 @@ export const lang = {
         NotFound: 'No saved furnitures found!',
       },
       SaleProducts: {
-        Title: 'Sale Furnitures', 
+        Title: 'Sale Furnitures',
+      },
+    },
+    OurWork: {
+      Intro: {
+        Title: 'About of our masters',
+      },
+      OurMasters: {
+        Title: 'Our Masters',
+      },
+      OurMastersWork: {
+        Title: 'Our Masters Work',
+      },
+    },
+    News: {
+      AllNews: {
+        Title: 'News',
       },
     },
   },
@@ -111,7 +127,23 @@ export const lang = {
         NotFound: 'Saqlangan mebel topilmadi!',
       },
       SaleProducts: {
-        Title: 'Sale Furnitures', 
+        Title: 'Sale Furnitures',
+      },
+    },
+    OurWork: {
+      Intro: {
+        Title: 'Ustalarimiz haqida',
+      },
+      OurMasters: {
+        Title: 'Bizning Ustalarimiz',
+      },
+      OurMastersWork: {
+        Title: 'Bizning ustalarni ishlari',
+      },
+    },
+    News: {
+      AllNews: {
+        Title: 'Yangiliklar',
       },
     },
   },

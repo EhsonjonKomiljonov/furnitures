@@ -74,20 +74,12 @@
   .hero {
     background-image: url('../../assets/images/tablet-hero-bgi.png');
     background-position: top -400px center;
-
-    .mouse {
-      bottom: -13vw;
-    }
   }
 }
 
 @media screen and (max-width: 755px) {
   .hero {
     background-position: top -200px center;
-
-    .mouse {
-      bottom: -29vw;
-    }
   }
 }
 

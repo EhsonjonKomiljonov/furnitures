@@ -10,7 +10,7 @@ export const SavedProductsIntro = () => {
         <div className='saved-intro__inner'>
           <h2>{t('SavedProducts.Intro.Title')}</h2>
         </div>
-        <a className='mouse' href='#all-furnitures'></a>
+        <a className='mouse' href='#all-saved-funritures'></a>
       </div>
     </section>
   );

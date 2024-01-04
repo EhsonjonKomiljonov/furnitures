@@ -16,7 +16,7 @@ export const SavedAllProducts = () => {
   }, []);
 
   return (
-    <section className='saved-all'>
+    <section className='saved-all' id="all-saved-funritures">
       <div className='container'>
         <div className='saved-all__inner'>
           <h2 className='text-center mb-4'>
@@ -28,7 +28,7 @@ export const SavedAllProducts = () => {
                 <AllFurnituresCard obj={item} key={item.id} path='saved' />
               ))
             ) : (
-              <h3>{t('SavedProducts.AllProducts.NotFound')}</h3>
+              <h3 className='text-center' >{t('SavedProducts.AllProducts.NotFound')}</h3>
             )}
           </ul>
         </div>

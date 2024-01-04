@@ -13,7 +13,7 @@ export const AllFurnitures = () => {
   const [category, setCategory] = useState(
     lang == 'en' ? 'popular' : 'ommabop'
   );
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   const handleSetCategory = (text: string) => {
     setCategory(text);
@@ -24,10 +24,12 @@ export const AllFurnitures = () => {
   }, [lang]);
 
   return (
-    <section className='all-furnitures'>
+    <section className='all-furnitures' id='all-furnitures'>
       <div className='container'>
         <div className='all-furnitures__inner'>
-          <h2 className='text-center mb-4'>{t('Furnitures.AllFurnitures.Title')}</h2>
+          <h2 className='text-center mb-4'>
+            {t('Furnitures.AllFurnitures.Title')}
+          </h2>
           <div className='dropdown'>
             <button
               className='btn dropdown-toggle'
