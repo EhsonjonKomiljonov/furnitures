@@ -7,6 +7,13 @@
   padding: 20px;
   background-color: #f1f1f1;
   border-radius: 10px;
+  transition: all .3s ease;
+  border: 2px solid transparent;
+  
+  &:hover {
+    transition: all .3s ease;
+    border: 2px solid var(--green);
+  }
 
   div:first-child {
     display: grid;

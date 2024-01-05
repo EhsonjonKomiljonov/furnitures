@@ -1,7 +1,8 @@
 import 'bootstrap/dist/js/bootstrap.js';
 import i18next from 'i18next';
 import { useLangStore } from '../../stores/LangStore';
-import './edit-lang.scss'
+import './edit-lang.scss';
+import { motion } from 'framer-motion';
 
 export const EditLang = () => {
   const setLang = useLangStore((store) => store.setLang);
@@ -14,7 +15,11 @@ export const EditLang = () => {
   };
 
   return (
-    <div className='dropdown edit-lang'>
+    <motion.div
+      initial={{ scale: 1 }}
+      animate={{ scale: [1, 1.5, 1], transition: { duration: 2, delay: 2 } }}
+      className='dropdown edit-lang'
+    >
       <button
         className='dropdown-toggle edit-lang__toggle'
         type='button'
@@ -41,6 +46,6 @@ export const EditLang = () => {
           </button>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };

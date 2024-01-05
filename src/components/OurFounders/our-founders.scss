@@ -1,9 +1,11 @@
 .our-founders {
   padding: 0 0 80px;
   font-family: 'Axiforma';
+  text-align: center;
 
   h2 {
     font-weight: 700;
+    display: inline-block;
   }
 
   ul {
@@ -12,6 +14,16 @@
     li {
       width: 100%;
       max-width: 500px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding-bottom: 15px;
+      transition: all .2s ease-in-out;
+      
+      &:hover {
+        box-shadow: #32325d40 0px 50px 100px -20px,
+        #0000004d 0px 30px 60px -30px;
+        transition: all .2s ease-in-out;
+      }
 
       img {
         width: 100%;
@@ -19,7 +31,7 @@
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
       }
-      
+
       h3 {
         margin-top: 20px;
         margin-bottom: 0;

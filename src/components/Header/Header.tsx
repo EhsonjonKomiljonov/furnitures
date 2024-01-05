@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { EditLang } from '../EditLang/EditLang';
 import SavedIcon from '../../assets/images/saved-icon.svg';
+import { motion } from 'framer-motion';
 import './header.scss';
 
 export const Header = () => {
@@ -22,42 +23,73 @@ export const Header = () => {
       <header className={`site-header ${isScroll ? 'scrolled' : ''}`}>
         <div className='container'>
           <div className='site-header__inner d-flex align-items-center justify-content-between'>
-            <Link className='logo' to='/'>
+            <motion.a
+              initial={{ y: -50, opacity: 0 }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='logo'
+              href='/'
+            >
               furniture
-            </Link>
+            </motion.a>
             <nav className='nav'>
               <ul className='w-100 d-flex align-items-center justify-content-between'>
-                <li>
+                <motion.li
+                  initial={{ y: -50 }}
+                  animate={{ y: 0, transition: { duration: 1, delay: 0.25 } }}
+                >
                   <NavLink to='/'>{t('Header.AboutLink')}</NavLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li
+                  initial={{ y: -50 }}
+                  animate={{ y: 0, transition: { duration: 1, delay: 0.5 } }}
+                >
                   <NavLink to='/furnitures'>
                     {t('Header.FurnitureLink')}
                   </NavLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li
+                  initial={{ y: -50 }}
+                  animate={{ y: 0, transition: { duration: 1, delay: 0.75 } }}
+                >
                   <NavLink to='/our-work'>{t('Header.OurWorkLink')}</NavLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li
+                  initial={{ y: -50 }}
+                  animate={{ y: 0, transition: { duration: 1, delay: 1 } }}
+                >
                   <NavLink to='/news'>{t('Header.NewsLink')}</NavLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li
+                  initial={{ y: -50 }}
+                  animate={{ y: 0, transition: { duration: 1, delay: 1.25 } }}
+                >
                   <NavLink to='/contact'>{t('Header.ContactLink')}</NavLink>
                   <span>|</span>
-                </li>
+                </motion.li>
               </ul>
             </nav>
             <EditLang />
           </div>
         </div>
       </header>
-      <div className='saved-link'>
+      <motion.div
+        initial={{ x: 50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1, transition: { duration: 1, delay: 2.25 } }}
+        className='saved-link'
+      >
         <Link to='/saved'>
           <img src={SavedIcon} alt='Saved' />
         </Link>
-      </div>
+      </motion.div>
       <nav className='mobile-navbar'>
-        <ul className='w-100 d-flex align-items-center justify-content-between'>
+        <motion.ul
+          initial={{ y: 80 }}
+          animate={{ y: 0, transition: { duration: 1, delay: 0.5 } }}
+          className='w-100 d-flex align-items-center justify-content-between'
+        >
           <li>
             <NavLink to='/'>{t('Header.AboutLink')}</NavLink>
           </li>
@@ -70,7 +102,7 @@ export const Header = () => {
           <li>
             <NavLink to='/news'>{t('Header.NewsLink')}</NavLink>
           </li>
-        </ul>
+        </motion.ul>
       </nav>
     </>
   );
