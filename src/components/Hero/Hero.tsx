@@ -35,6 +35,7 @@ export const Hero = () => {
             variants={container}
             initial='hidden'
             animate='visible'
+            viewport={{ once: true }}
           >
             {t('Home.Hero.Title')
               .split(' ')

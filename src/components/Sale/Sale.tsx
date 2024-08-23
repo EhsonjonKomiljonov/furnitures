@@ -50,6 +50,7 @@ export const Sale = () => {
                 scale: [1, 1, 1.2, 1],
                 transition: { duration: 1.4, delay: 1 },
               }}
+              viewport={{ once: true }}
             >
               {t('Home.Sale.Title')}
             </motion.h2>
@@ -61,6 +62,7 @@ export const Sale = () => {
                 rotateY: [0, 0, 0, 180, 0],
                 transition: { duration: 1.5, delay: 1 },
               }}
+              viewport={{ once: true }}
             >
               {t('Home.Sale.Desc')}
             </motion.p>
@@ -69,6 +71,7 @@ export const Sale = () => {
               variants={container}
               initial='hidden'
               whileInView='visible'
+              viewport={{ once: true }}
             >
               {t('Home.Sale.SaleDate')
                 .split(' ')
@@ -86,6 +89,7 @@ export const Sale = () => {
                   opacity: 1,
                   transition: { duration: 1, delay: 3 },
                 }}
+                viewport={{ once: true }}
               >
                 The <span>furniture</span> Winter Sale!
               </motion.h3>
@@ -97,6 +101,7 @@ export const Sale = () => {
                   opacity: 1,
                   transition: { duration: 1, delay: 3 },
                 }}
+                viewport={{ once: true }}
               >
                 <span>furniture</span> dan qishki chegirma!
               </motion.h3>
@@ -106,6 +111,7 @@ export const Sale = () => {
               variants={containerDesc}
               initial='hidden'
               whileInView='visible'
+              viewport={{ once: true }}
             >
               {t('Home.Sale.SubDesc')
                 .split(' ')

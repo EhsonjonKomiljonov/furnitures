@@ -6,7 +6,9 @@
     font-weight: 700;
   }
 
-  ul.all-furnitures__list {
+  .all-furnitures__list {
+    position: relative;
+    transform: translateY(0) !important;
     gap: 40px;
   }
 }

@@ -80,7 +80,7 @@
         transition: width 0.7s cubic-bezier(0, 0, 0.13, 0.99);
         content: '';
       }
-
+      
       &:hover::after {
         width: 100%;
       }

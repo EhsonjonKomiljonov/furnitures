@@ -36,6 +36,7 @@ export const CheckOutFurniture = () => {
       <div className='container'>
         <div className='check-furniture__inner'>
           <motion.h2
+            viewport={{ once: true }}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } }}
             className='text-center'
@@ -43,6 +44,7 @@ export const CheckOutFurniture = () => {
             {t('Home.CheckOutFurniture.Title')}
           </motion.h2>
           <motion.div
+            viewport={{ once: true }}
             variants={container}
             initial='hidden'
             whileInView='visible'

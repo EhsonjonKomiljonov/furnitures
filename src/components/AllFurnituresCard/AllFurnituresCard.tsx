@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useSaveStore } from '../../stores/SaveStore';
 import { AllFurnituresCardProp } from '../../types';
 import './all-furnitures-card.scss';
@@ -8,7 +9,9 @@ export const AllFurnituresCard = ({ obj, path }: AllFurnituresCardProp) => {
 
   const handleSaveProduct = (evt: React.ChangeEvent<HTMLInputElement>) => {
     if (evt.currentTarget.checked) {
-      const localData = JSON.parse(localStorage.getItem('all-products') || '[]');
+      const localData = JSON.parse(
+        localStorage.getItem('all-products') || '[]'
+      );
 
       if (id.toString() == evt.currentTarget.id) {
         localData.push(obj);
@@ -17,7 +20,9 @@ export const AllFurnituresCard = ({ obj, path }: AllFurnituresCardProp) => {
       setSavedData(localData);
       localStorage.setItem('all-products', JSON.stringify(localData));
     } else {
-      const localData = JSON.parse(localStorage.getItem('all-products')  || '[]');
+      const localData = JSON.parse(
+        localStorage.getItem('all-products') || '[]'
+      );
 
       const deletedProduct = localData.filter(
         (item: any) => item.id != evt.currentTarget.id
@@ -28,8 +33,16 @@ export const AllFurnituresCard = ({ obj, path }: AllFurnituresCardProp) => {
     }
   };
 
+  const child = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <li className='furnitures-card'>
+    <motion.div className='furnitures-card' variants={child}>
       <img src={img} alt={title} />
       <div>
         <h3>{title}</h3>
@@ -60,6 +73,6 @@ export const AllFurnituresCard = ({ obj, path }: AllFurnituresCardProp) => {
           </svg>
         </label>
       </div>
-    </li>
+    </motion.div>
   );
 };

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -22,6 +23,18 @@ export const AllFurnitures = () => {
   useEffect(() => {
     setCategory(lang == 'en' ? 'popular' : 'ommabop');
   }, [lang]);
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.3,
+      },
+    },
+  };
 
   return (
     <section className='all-furnitures' id='all-furnitures'>
@@ -102,7 +115,13 @@ export const AllFurnitures = () => {
               </li>
             </ul>
           </div>
-          <ul className='d-flex align-items-center justify-content-center flex-wrap all-furnitures__list'>
+          <motion.div
+            variants={container}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+            className='d-flex align-items-center justify-content-center flex-wrap all-furnitures__list'
+          >
             {lang == 'en'
               ? allFurnituresData.map((item) => {
                   if (item.category == category) {
@@ -116,7 +135,7 @@ export const AllFurnitures = () => {
                   } else if (category == 'ommabop')
                     return <AllFurnituresCard obj={item} key={item.id} />;
                 })}
-          </ul>
+          </motion.div>
         </div>
       </div>
     </section>
